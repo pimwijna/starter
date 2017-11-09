@@ -1,1 +1,4 @@
-# My project's README
+# Demo
+
+
+npm run-script build
