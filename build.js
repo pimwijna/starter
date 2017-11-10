@@ -7,14 +7,11 @@ const files = [
   path.join(require.resolve('jquery'))
 ];
 
-
 var concat = new Concat(true, 'all.js', '\n');
 
 for(let i = 0; i < files.length; i += 1) {
     concat.add(path.basename(files[i]),fs.readFileSync(files[i]).toString());
 }
-
-
 
 fs.writeFileSync('dist/bundle.js', concat.content);
 

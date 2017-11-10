@@ -7,12 +7,16 @@
   "devDependencies": {
     "alpaca": "^1.5.23",
     "concat-with-sourcemaps": "^1.0.4",
+    "connect": "^3.6.5",
     "jquery": "^3.2.1",
+    "livereload": "^0.6.3",
+    "serve-static": "^1.13.1",
     "uglify-js": "^3.1.8"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node ./build.js"
+    "build": "node ./build.js",
+    "serve": "node ./run.js"
   },
   "repository": {
     "type": "git",
