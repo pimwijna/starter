@@ -27,11 +27,5 @@
   },
   "author": "",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/nwlallart/npm-basic#readme",
-  "nodemonConfig": {
-    "ignore": [
-      "dist/*",
-      "docs/*"
-    ]
-  }
+  "homepage": "https://bitbucket.org/nwlallart/npm-basic#readme"
 }
