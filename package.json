@@ -18,7 +18,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "browserify src/bundle.js > dist/bundle.js",
+    "build": "browserify src/bundle.js > dist/bundle.js && node_modules/uglify-js/bin/uglifyjs > dist/bundle.js dist/bundle.min.js",
     "serve": "node ./run.js"
   },
   "repository": {
