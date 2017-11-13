@@ -12,13 +12,13 @@
     "handlebars": "^4.0.11",
     "jquery": "^3.2.1",
     "livereload": "^0.6.3",
-    "nodemon": "^1.12.1",
     "serve-static": "^1.13.1",
-    "uglify-js": "^3.1.8"
+    "uglify-js": "^3.1.8",
+    "watchify": "^3.9.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "browserify src/bundle.js > dist/bundle.js",    
+    "build": "browserify src/bundle.js > dist/bundle.js",
     "serve": "node ./run.js"
   },
   "repository": {
@@ -29,6 +29,9 @@
   "license": "ISC",
   "homepage": "https://bitbucket.org/nwlallart/npm-basic#readme",
   "nodemonConfig": {
-    "ignore": ["dist/*", "docs/*"]
+    "ignore": [
+      "dist/*",
+      "docs/*"
+    ]
   }
 }
