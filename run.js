@@ -26,5 +26,10 @@ b.on('log', function (log) {
 bundle();
 
 function bundle() {
-  b.bundle().pipe(fs.createWriteStream('dist/bundle.js'));
+  b.bundle(function(err,buf) {
+    if(err) {
+      console.log(err);
+    }
+    fs.writeFileSync('dist/bundle.js',buf);
+  });
 }
