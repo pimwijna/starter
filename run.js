@@ -1,22 +1,13 @@
-const connect = require('connect');
-const serveStatic = require('serve-static');
 const path = require('path');
 const livereload = require('livereload');
 const watchify = require('watchify');
 const browserify = require('browserify');
 const fs = require('fs');
+const bs = require("browser-sync").create();
 
-var server = connect();
-
-server.use(serveStatic(path.join(__dirname,'example')));
-server.use(serveStatic(path.join(__dirname, 'dist')));
-server.listen(3000);
-const lrserver = livereload.createServer({
-  delay: 200
+bs.init({
+    server: ["example","dist"]
 });
-lrserver.watch([path.join(__dirname,'example')]);
-lrserver.watch([path.join(__dirname,'dist')]);
-console.log('http://localhost:3000');
 
 
 var b = browserify({
@@ -30,6 +21,7 @@ var b = browserify({
 b.on('update', bundle);
 b.on('log', function (log) {
   console.log(log);
+  bs.reload("*.html");
 });
 bundle();
 
