@@ -11,7 +11,7 @@ Requirements:
 
 ### npm run start
 
-Starts a server with livereload and watches files in src/
+Starts a server with livereload and watches files in dist/ and app/
 
 ## npm run build
 
