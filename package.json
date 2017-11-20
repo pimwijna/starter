@@ -34,7 +34,7 @@
     "watch:script": "watchify src/scripts/index.js -o dist/index.js -t [ babelify --presets [ es2015 react ] ]",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm-run-all build:*",
-    "build:scripts": "browserify src/scripts/index.js -o dist/index.js -t [ babelify --presets [ es2015 react ] ] && node_modules/uglify-js/bin/uglifyjs > dist/bundle.js dist/bundle.min.js",
+    "build:scripts": "browserify src/scripts/index.js -o dist/index.js -t [ babelify --presets [ es2015 react ] ] && node_modules/uglify-js/bin/uglifyjs dist/index.js > dist/index.min.js",
     "build:sass": "node-sass src/sass/index.scss --include-path node_modules/bootstrap/scss dist/index.css",
     "serve": "browser-sync start --config \"bs-config.js\""
   },
