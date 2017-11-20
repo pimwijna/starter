@@ -25,7 +25,7 @@
   },
   "scripts": {
     "start": "npm-run-all -p serve watch:*",
-    "watch:sass": "node-sass -w src/sass/index.scss --include-path node_modules/bootstrap/scss",
+    "watch:sass": "node-sass -w src/sass/index.scss --include-path node_modules/bootstrap/scss dist/index.css",
     "watch:script": "watchify src/scripts/index.js -o dist/index.js -t [ babelify --presets [ es2015 react ] ]",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "browserify src/bundle.js > dist/bundle.js && node_modules/uglify-js/bin/uglifyjs > dist/bundle.js dist/bundle.min.js",
