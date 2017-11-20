@@ -2,8 +2,13 @@
   "name": "npm-basic",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/bundle.js",
+  "main": "dist/index.js",
+  "module": "src/scripts/index.js",
   "dependencies": {},
+  "files": [
+    "dist",
+    "src"
+  ],
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
